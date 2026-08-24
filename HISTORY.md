@@ -1,5 +1,11 @@
 # T10GO Shared Packages — Technical History
 
+## 2026-08-24 — Indigo and teal application palette
+
+**Decision:** Replaced the warm brown/orange palette with indigo primary actions, teal support and focus colors, and neutral slate surfaces in light and dark themes.
+
+**Impact:** The shared Design System has a more focused, professional management-application appearance while retaining accessible text and status contrast.
+
 ## 2026-08-24 — GitHub Packages workspace established
 
 **Decision:** T10GO shared packages are published from this repository to GitHub Packages under the `@lengi21` scope.

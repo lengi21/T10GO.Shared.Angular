@@ -1,27 +1,31 @@
 [data-theme='light'] {
-  --app-surface-page: #fff8f0;
-  --app-surface-container: #fffaf6;
+  --app-surface-page: #f6f7fb;
+  --app-surface-container: #fbfbfe;
   --app-surface-elevated: #ffffff;
+  --app-surface-sunken: #eef1f8;
 
-  --app-text-primary: #4b2e2b;
-  --app-text-secondary: #6f514b;
-  --app-text-muted: #8c7169;
+  --app-text-primary: #182033;
+  --app-text-secondary: #5e6b85;
+  --app-text-muted: #8590a7;
 
-  --app-border: #e5d5cb;
+  --app-border: #e2e6f0;
 
-  --app-primary: #8c5a3c;
+  --app-primary: #4f46e5;
+  --app-primary-strong: #3730a3;
+  --app-primary-subtle: #eef2ff;
   --app-on-primary: #ffffff;
 
-  --app-secondary: #c08552;
+  --app-secondary: #0f766e;
+  --app-secondary-subtle: #e6fffb;
   --app-on-secondary: #ffffff;
 
-  --app-focus-ring: #c08552;
+  --app-focus-ring: #14b8a6;
 
   /*
    * Status
    */
-  --app-success: #3f6b4f;
-  --app-warning: #a66a00;
-  --app-error: #b3261e;
-  --app-info: #496b82;
+  --app-success: #15803d;
+  --app-warning: #b45309;
+  --app-error: #c2410c;
+  --app-info: #2563eb;
 }

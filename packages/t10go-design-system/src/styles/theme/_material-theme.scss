@@ -6,8 +6,8 @@ html {
   @include mat.theme(
     (
       color: (
-        primary: mat.$orange-palette,
-        tertiary: mat.$red-palette,
+        primary: mat.$azure-palette,
+        tertiary: mat.$cyan-palette,
       ),
       typography: (
         plain-family: 'Inter',

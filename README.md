@@ -10,6 +10,10 @@ Private packages shared by the T10GO Shell and federated remote applications. Pa
 | `@lengi21/t10go-design-system` | Publishable | Reusable Angular components, theme tokens, navigation, and form foundations |
 | `@lengi21/t10go-env-loader` | Publishable | App-neutral runtime configuration loader |
 
+## Theme palette
+
+The Design System uses a calm indigo-and-teal palette: indigo signals primary actions and navigation, teal supports focus and secondary actions, and neutral navy/slate surfaces keep both themes legible in information-dense management screens. Theme values are CSS custom properties in `packages/t10go-design-system/src/styles/theme/`.
+
 ## Install in an application
 
 Create a project `.npmrc` file:
