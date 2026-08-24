@@ -4,6 +4,7 @@ export * from './lib/button';
 export * from './lib/card';
 export * from './lib/text-input';
 export * from './lib/number-input';
+export * from './lib/textarea';
 export * from './lib/slider';
 export * from './lib/dropdown';
 export * from './lib/navigation';
