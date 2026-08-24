@@ -1,6 +1,6 @@
 {
   "name": "@lengi21/t10go-design-system",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Reusable Angular UI components, navigation, themes, and tokens for T10GO.",
   "sideEffects": false,
   "peerDependencies": {
