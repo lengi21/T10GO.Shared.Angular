@@ -1,0 +1,27 @@
+[data-theme='dark'] {
+  --app-surface-page: #211514;
+  --app-surface-container: #2b1c19;
+  --app-surface-elevated: #34231f;
+
+  --app-text-primary: #f7e9df;
+  --app-text-secondary: #d8bdb0;
+  --app-text-muted: #b99b8e;
+
+  --app-border: #5a4038;
+
+  --app-primary: #c08552;
+  --app-on-primary: #2b1c19;
+
+  --app-secondary: #d49a68;
+  --app-on-secondary: #2b1c19;
+
+  --app-focus-ring: #d49a68;
+
+  /*
+   * Status
+   */
+  --app-success: #8fbd9d;
+  --app-warning: #e5b567;
+  --app-error: #ffb4ab;
+  --app-info: #9fc3da;
+}

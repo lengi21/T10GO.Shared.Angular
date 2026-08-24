@@ -1,0 +1,25 @@
+{
+  "name": "@lengi21/t10go-env-loader",
+  "version": "0.1.0",
+  "description": "Typed Angular runtime environment configuration loader for T10GO applications.",
+  "sideEffects": false,
+  "peerDependencies": {
+    "@angular/common": "^22.0.0",
+    "@angular/core": "^22.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lengi21/T10GO.Shared.Angular.git"
+  },
+  "license": "UNLICENSED"
+}

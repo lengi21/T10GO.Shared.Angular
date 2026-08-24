@@ -1,0 +1,53 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px,
+);
+
+@function breakpoint($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @error "Unknown breakpoint `#{$name}`. Available breakpoints: #{map-keys($breakpoints)}";
+  }
+
+  @return map-get($breakpoints, $name);
+}
+
+@mixin breakpoint-up($name) {
+  $value: breakpoint($name);
+
+  @if $value == 0 {
+    @content;
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-down($name) {
+  $value: breakpoint($name);
+
+  @if $value == 0 {
+    @content;
+  } @else {
+    @media (max-width: ($value - 0.02px)) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-between($lower, $upper) {
+  $lower-value: breakpoint($lower);
+  $upper-value: breakpoint($upper);
+
+  @if $lower-value >= $upper-value {
+    @error "The lower breakpoint must be smaller than the upper breakpoint.";
+  }
+
+  @media (min-width: $lower-value) and (max-width: ($upper-value - 0.02px)) {
+    @content;
+  }
+}

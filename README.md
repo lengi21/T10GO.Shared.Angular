@@ -7,8 +7,8 @@ Private packages shared by the T10GO Shell and federated remote applications. Pa
 | Package | Status | Purpose |
 | --- | --- | --- |
 | `@lengi21/federation-contracts` | Publishable | Shared navigation, route, and federation-manifest TypeScript contracts |
-| `@lengi21/t10go-design-system` | Planned | Reusable Angular components, theme tokens, and form foundations currently in the Shell workspace |
-| `@lengi21/t10go-env-loader` | Planned | App-neutral runtime configuration loader currently in the Shell workspace |
+| `@lengi21/t10go-design-system` | Publishable | Reusable Angular components, theme tokens, navigation, and form foundations |
+| `@lengi21/t10go-env-loader` | Publishable | App-neutral runtime configuration loader |
 
 ## Install in an application
 
@@ -21,7 +21,7 @@ Create a project `.npmrc` file:
 Authenticate locally with a GitHub personal access token that has package read access, then install a package:
 
 ```bash
-pnpm add @lengi21/federation-contracts
+pnpm add @lengi21/t10go-design-system @lengi21/t10go-env-loader
 ```
 
 GitHub Actions uses `GITHUB_TOKEN` to publish packages and does not need a stored personal token.
@@ -38,7 +38,7 @@ Do not overwrite an existing package version. Use semantic versioning and upgrad
 ## Extraction plan
 
 1. Publish and consume `@lengi21/federation-contracts` in Shell and Wedding Manager.
-2. Extract and publish the design system without changing its public API.
-3. Generalize and extract the environment loader so each app can load its own runtime configuration.
+2. Publish the design system and environment loader without changing their public APIs.
+3. Consume shared packages from all applications through explicit version upgrades.
 
 Record package-contract decisions in [HISTORY.md](HISTORY.md).

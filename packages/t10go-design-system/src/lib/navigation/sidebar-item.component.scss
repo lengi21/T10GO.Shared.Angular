@@ -1,0 +1,93 @@
+:host {
+  display: block;
+}
+
+.t10go-navigation-item,
+.t10go-navigation-item__row {
+  display: block;
+  width: 100%;
+}
+
+.t10go-navigation-item__link,
+.t10go-navigation-item__button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 var(--t10go-sidebar-item-inline-padding);
+  gap: var(--app-space-3);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--app-radius-md);
+  background: transparent;
+  color: var(--app-text-secondary);
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--app-transition-fast), color var(--app-transition-fast);
+}
+
+.t10go-navigation-item__button:disabled { cursor: default; }
+
+.t10go-navigation-item__link:hover,
+.t10go-navigation-item__button:not(:disabled):hover {
+  background: color-mix(in srgb, var(--app-primary) 8%, transparent);
+  color: var(--app-primary);
+}
+
+.t10go-navigation-item__label {
+  min-width: 0;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: max-width var(--app-transition-normal), opacity var(--app-transition-fast);
+}
+
+.t10go-navigation-item__expand-icon {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity var(--app-transition-fast), transform var(--app-transition-fast);
+}
+
+.t10go-navigation-item__expand-icon--expanded { transform: rotate(180deg); }
+
+.t10go-navigation-item__children {
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-space-1);
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 36px;
+  opacity: 0;
+  transition: max-height var(--app-transition-normal), opacity var(--app-transition-fast);
+}
+
+.t10go-navigation-item__children--expanded {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.t10go-navigation-item__children > * { min-height: 0; overflow: hidden; }
+
+:host-context(.t10go-sidebar:hover) .t10go-navigation-item__label,
+:host-context(.t10go-sidebar:focus-within) .t10go-navigation-item__label {
+  max-width: 180px;
+  opacity: 1;
+}
+
+:host-context(.t10go-sidebar:hover) .t10go-navigation-item__expand-icon,
+:host-context(.t10go-sidebar:focus-within) .t10go-navigation-item__expand-icon { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .t10go-navigation-item__label,
+  .t10go-navigation-item__expand-icon,
+  .t10go-navigation-item__children { transition: none; }
+}

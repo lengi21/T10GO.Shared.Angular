@@ -1,0 +1,20 @@
+<div class="t10go-field" [class.t10go-field--invalid]="error()">
+  @if (label()) {
+    <label class="t10go-field__label" [attr.for]="controlId()">
+      {{ label() }}
+      @if (required()) {
+        <span class="t10go-field__required" aria-hidden="true">*</span>
+      }
+    </label>
+  }
+
+  <ng-content />
+
+  @if (error()) {
+    <p class="t10go-field__message t10go-field__message--error" [id]="controlId() + '-error'">
+      {{ error() }}
+    </p>
+  } @else if (hint()) {
+    <p class="t10go-field__message" [id]="controlId() + '-hint'">{{ hint() }}</p>
+  }
+</div>
