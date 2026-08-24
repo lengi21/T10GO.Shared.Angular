@@ -1,0 +1,29 @@
+{
+  "name": "@lengi21/federation-contracts",
+  "version": "0.1.0",
+  "description": "Shared Native Federation contracts for T10GO applications.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lengi21/T10GO.Shared.Angular.git"
+  },
+  "license": "UNLICENSED"
+}
