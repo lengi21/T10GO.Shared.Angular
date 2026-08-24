@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, input } from '@angular/core';
 
 export type T10goButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
 export type T10goButtonType = 'button' | 'reset' | 'submit';
@@ -15,4 +15,7 @@ export class T10goButtonComponent {
   readonly type = input<T10goButtonType>('button');
   readonly disabled = input(false);
   readonly block = input(false);
+
+  @HostBinding('class.t10go-button-host--block')
+  protected get isBlock(): boolean { return this.block(); }
 }
