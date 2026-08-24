@@ -15,3 +15,7 @@
 **Impact:** Shell and federated remotes can consume the same versioned components, tokens, and runtime configuration API.
 
 **Release rule:** This repository is the source of truth for publishable shared code. Every release requires a new package version; published versions are immutable.
+
+## 2026-08-24 — Workflow package-path correction
+
+**Fix:** The GitHub Actions publish command now prefixes Angular build output directories with `./`, ensuring npm treats them as local packages rather than Git repository names.

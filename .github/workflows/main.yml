@@ -36,10 +36,10 @@ jobs:
         run: |
           case '${{ inputs.package }}' in
             '@lengi21/t10go-design-system')
-              npm publish dist/t10go-design-system --access restricted
+              npm publish ./dist/t10go-design-system --access restricted
               ;;
             '@lengi21/t10go-env-loader')
-              npm publish dist/t10go-env-loader --access restricted
+              npm publish ./dist/t10go-env-loader --access restricted
               ;;
             '@lengi21/federation-contracts')
               pnpm --filter '${{ inputs.package }}' publish --no-git-checks
