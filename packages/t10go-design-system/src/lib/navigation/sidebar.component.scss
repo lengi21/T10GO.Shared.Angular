@@ -1,0 +1,54 @@
+:host {
+  --t10go-sidebar-collapsed-width: var(--app-sidebar-collapsed-width);
+  --t10go-sidebar-expanded-width: var(--app-sidebar-expanded-width);
+  --t10go-sidebar-item-inline-padding: calc(
+    (var(--app-sidebar-collapsed-width) - 24px - var(--app-space-2) - var(--app-space-2)) / 2
+  );
+
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: var(--app-layout-edge-space);
+  display: block;
+  width: var(--t10go-sidebar-collapsed-width);
+  max-height: calc(100dvh - var(--app-layout-edge-space) - var(--app-layout-edge-space));
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: width var(--app-transition-normal), transform var(--app-transition-normal);
+}
+
+.t10go-sidebar {
+  position: relative;
+  width: 100%;
+  max-height: calc(100dvh - var(--app-layout-edge-space) - var(--app-layout-edge-space));
+  padding: var(--app-space-3) var(--app-space-2);
+  overflow: hidden;
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-layout-floating-radius);
+  background: var(--app-surface-elevated);
+  box-shadow: var(--app-shadow-lg);
+  pointer-events: auto;
+  transition: width var(--app-transition-normal), box-shadow var(--app-transition-normal);
+}
+
+.t10go-sidebar:hover,
+.t10go-sidebar:focus-within {
+  --t10go-sidebar-item-inline-padding: var(--app-space-3);
+
+  width: var(--t10go-sidebar-expanded-width);
+}
+
+.t10go-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--app-space-1);
+  width: 100%;
+  max-height: calc(100dvh - var(--app-layout-edge-space) - var(--app-layout-edge-space) - var(--app-space-6));
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :host,
+  .t10go-sidebar { transition: none; }
+}

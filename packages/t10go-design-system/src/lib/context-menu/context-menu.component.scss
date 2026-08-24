@@ -1,0 +1,34 @@
+:host {
+  position: relative;
+  display: inline-block;
+}
+
+.t10go-context-menu__panel {
+  position: absolute;
+  z-index: 1100;
+  top: calc(100% + var(--app-space-2));
+  right: 0;
+  display: grid;
+  width: max-content;
+  min-width: 17rem;
+  max-width: min(24rem, calc(100vw - var(--app-space-4)));
+  padding: var(--app-space-2);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius-md);
+  background: var(--app-surface-elevated);
+  box-shadow: var(--app-shadow-lg);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.25rem);
+  transition: opacity var(--app-transition-fast), transform var(--app-transition-fast);
+}
+
+:host.t10go-context-menu--open .t10go-context-menu__panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t10go-context-menu__panel { transition: none; }
+}

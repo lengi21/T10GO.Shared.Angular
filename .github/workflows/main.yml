@@ -9,6 +9,8 @@ on:
         type: choice
         options:
           - '@lengi21/federation-contracts'
+          - '@lengi21/t10go-design-system'
+          - '@lengi21/t10go-env-loader'
 
 permissions:
   contents: read
@@ -30,6 +32,18 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm --filter '${{ inputs.package }}' run build
-      - run: pnpm --filter '${{ inputs.package }}' publish --no-git-checks
+      - name: Publish selected package
+        run: |
+          case '${{ inputs.package }}' in
+            '@lengi21/t10go-design-system')
+              npm publish dist/t10go-design-system --access restricted
+              ;;
+            '@lengi21/t10go-env-loader')
+              npm publish dist/t10go-env-loader --access restricted
+              ;;
+            '@lengi21/federation-contracts')
+              pnpm --filter '${{ inputs.package }}' publish --no-git-checks
+              ;;
+          esac
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

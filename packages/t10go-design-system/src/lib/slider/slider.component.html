@@ -1,0 +1,34 @@
+<div class="t10go-slider">
+  @if (label() || showValue()) {
+    <div class="t10go-slider__header">
+      @if (label()) {
+        <label class="t10go-slider__label" [attr.for]="controlId()">
+          {{ label() }}
+        </label>
+      }
+
+      @if (showValue()) {
+        <output class="t10go-slider__value" [attr.for]="controlId()">
+          {{ displayedValue() }}
+        </output>
+      }
+    </div>
+  }
+
+  <input
+    class="t10go-slider__input"
+    type="range"
+    [id]="controlId()"
+    [name]="name()"
+    [min]="min()"
+    [max]="max()"
+    [step]="step()"
+    [value]="value()"
+    [disabled]="isDisabled()"
+    [required]="required()"
+    [attr.aria-label]="ariaLabel() ?? label()"
+    [attr.aria-valuetext]="valueFormatter() ? displayedValue() : null"
+    (input)="updateValue($event)"
+    (blur)="markTouched()"
+  />
+</div>

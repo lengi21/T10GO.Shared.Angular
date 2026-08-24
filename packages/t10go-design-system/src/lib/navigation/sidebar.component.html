@@ -1,0 +1,7 @@
+<aside class="t10go-sidebar">
+  <nav class="t10go-sidebar__nav" [attr.aria-label]="ariaLabel()">
+    @for (item of items(); track item.id) {
+      <t10go-sidebar-item [item]="item" />
+    }
+  </nav>
+</aside>

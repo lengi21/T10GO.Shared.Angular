@@ -1,0 +1,62 @@
+<div class="t10go-navigation-item">
+  <div class="t10go-navigation-item__row">
+    @if (item().route) {
+      <a
+        class="t10go-navigation-item__link"
+        [routerLink]="item().route"
+        [attr.aria-label]="item().label"
+        [attr.aria-expanded]="hasChildren() ? expanded() : null"
+        (click)="toggleExpanded()"
+      >
+        @if (item().icon) {
+          <span class="material-icons md-24">{{ item().icon }}</span>
+        }
+
+        <span class="t10go-navigation-item__label">{{ item().label }}</span>
+
+        @if (hasChildren()) {
+          <span
+            class="material-icons md-24 t10go-navigation-item__expand-icon"
+            [class.t10go-navigation-item__expand-icon--expanded]="expanded()"
+            aria-hidden="true"
+          >expand_more</span>
+        }
+      </a>
+    } @else {
+      <button
+        class="t10go-navigation-item__button"
+        type="button"
+        [attr.aria-label]="item().label"
+        [attr.aria-expanded]="expanded()"
+        [disabled]="!hasChildren()"
+        (click)="toggleExpanded()"
+      >
+        @if (item().icon) {
+          <span class="material-icons md-24">{{ item().icon }}</span>
+        }
+
+        <span class="t10go-navigation-item__label">{{ item().label }}</span>
+
+        @if (hasChildren()) {
+          <span
+            class="material-icons md-24 t10go-navigation-item__expand-icon"
+            [class.t10go-navigation-item__expand-icon--expanded]="expanded()"
+            aria-hidden="true"
+          >expand_more</span>
+        }
+      </button>
+    }
+  </div>
+
+  @if (hasChildren()) {
+    <div
+      class="t10go-navigation-item__children"
+      [class.t10go-navigation-item__children--expanded]="expanded()"
+      [attr.aria-hidden]="!expanded()"
+    >
+      @for (child of item().children; track child.id) {
+        <t10go-sidebar-item [item]="child" />
+      }
+    </div>
+  }
+</div>

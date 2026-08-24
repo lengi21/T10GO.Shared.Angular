@@ -1,0 +1,33 @@
+<t10go-field
+  [controlId]="controlId()"
+  [label]="label()"
+  [hint]="hint()"
+  [error]="message()"
+  [required]="required()"
+>
+  <div class="t10go-dropdown__control">
+    <select
+      class="t10go-dropdown"
+      [id]="controlId()"
+      [name]="name()"
+      [value]="value()"
+      [disabled]="isDisabled() || isLoading()"
+      [required]="required()"
+      [attr.aria-describedby]="hint() ? controlId() + '-hint' : null"
+      [attr.aria-errormessage]="message() ? controlId() + '-error' : null"
+      [attr.aria-invalid]="message() ? 'true' : null"
+      (change)="selectValue($event)"
+      (blur)="markTouched()"
+    >
+      <option value="" [disabled]="required() || isLoading()">
+        {{ isLoading() ? 'Loading options…' : placeholder() }}
+      </option>
+      @for (option of currentOptions(); track option.value) {
+        <option [value]="option.value" [disabled]="option.disabled">
+          {{ option.label }}
+        </option>
+      }
+    </select>
+    <span class="t10go-dropdown__chevron" aria-hidden="true"></span>
+  </div>
+</t10go-field>

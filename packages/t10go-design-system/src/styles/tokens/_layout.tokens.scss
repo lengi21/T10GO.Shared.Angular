@@ -1,0 +1,10 @@
+:root {
+  --app-header-height: 45px;
+  --app-sidebar-collapsed-width: 45px;
+  --app-sidebar-expanded-width: 280px;
+  --app-layout-edge-space: var(--app-space-3);
+  --app-layout-floating-radius: var(--app-radius-xl);
+  --app-sidebar-content-offset: calc(
+    var(--app-layout-edge-space) + var(--app-sidebar-collapsed-width) + var(--app-layout-edge-space)
+  );
+}
