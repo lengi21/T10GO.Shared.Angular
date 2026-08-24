@@ -13,3 +13,5 @@
 **Decision:** The Design System and environment-loader packages are published as Angular partial-compilation libraries with Angular 22 peer dependencies.
 
 **Impact:** Shell and federated remotes can consume the same versioned components, tokens, and runtime configuration API.
+
+**Release rule:** This repository is the source of truth for publishable shared code. Every release requires a new package version; published versions are immutable.

@@ -28,10 +28,16 @@ GitHub Actions uses `GITHUB_TOKEN` to publish packages and does not need a store
 
 ## Publish a release
 
-1. Update the package version in its `package.json`.
-2. Run `pnpm install` and `pnpm build` locally.
-3. Push the version change.
-4. Run the **Publish package** GitHub Actions workflow manually and select the package.
+The source of truth for published shared code is this repository, not a copy in an application repository.
+
+1. Change the source under `packages/t10go-design-system/src` or `packages/t10go-env-loader/src`.
+2. Increase that package's `version` in its `package.json` (for example, `0.1.0` to `0.1.1`). GitHub Packages never permits overwriting a published version.
+3. From this repository, run `pnpm install` and then `pnpm --filter @lengi21/<package-name> run build`.
+4. Commit and push the source, version, and lockfile changes to the default branch.
+5. Run the **Publish package** GitHub Actions workflow manually, selecting the changed package.
+6. In Shell and Wedding Manager, update the dependency version with `pnpm update @lengi21/<package-name>` and commit the resulting lockfile.
+
+For an urgent temporary change made in Shell's local library copy, copy the same change into this repository before publishing. Do not let the copies diverge; the recommended next migration is to make Shell consume these packages too.
 
 Do not overwrite an existing package version. Use semantic versioning and upgrade Shell/remote dependencies deliberately.
 
