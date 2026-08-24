@@ -1,5 +1,11 @@
 # T10GO Shared Packages — Technical History
 
+## 2026-08-25 — Shared Angular authentication client
+
+**Decision:** Added `@lengi21/t10go-auth-client`, which provides a session-only token store, Authorization Code + PKCE browser flow, shared protected-route guard, and opt-in Bearer-token interceptor.
+
+**Impact:** Shell owns account screens and identity while every federated application can use the same session and API-authentication behavior without copying auth code.
+
 ## 2026-08-24 — User-selectable palettes
 
 **Decision:** Added persistent palette selection to `ThemeService` and a reusable swatch dropdown that renders palette names with visible color strips.

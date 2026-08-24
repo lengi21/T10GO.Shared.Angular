@@ -9,6 +9,7 @@ Private packages shared by the T10GO Shell and federated remote applications. Pa
 | `@lengi21/federation-contracts` | Publishable | Shared navigation, route, and federation-manifest TypeScript contracts |
 | `@lengi21/t10go-design-system` | Publishable | Reusable Angular components, theme tokens, navigation, and form foundations |
 | `@lengi21/t10go-env-loader` | Publishable | App-neutral runtime configuration loader |
+| `@lengi21/t10go-auth-client` | Publishable | Shared Shell login session, PKCE, route guard, and bearer-token interceptor |
 
 ## Theme palette
 
@@ -25,7 +26,7 @@ Create a project `.npmrc` file:
 Authenticate locally with a GitHub personal access token that has package read access, then install a package:
 
 ```bash
-pnpm add @lengi21/t10go-design-system @lengi21/t10go-env-loader
+pnpm add @lengi21/t10go-design-system @lengi21/t10go-env-loader @lengi21/t10go-auth-client
 ```
 
 GitHub Actions uses `GITHUB_TOKEN` to publish packages and does not need a stored personal token.
@@ -34,7 +35,7 @@ GitHub Actions uses `GITHUB_TOKEN` to publish packages and does not need a store
 
 The source of truth for published shared code is this repository, not a copy in an application repository.
 
-1. Change the source under `packages/t10go-design-system/src` or `packages/t10go-env-loader/src`.
+1. Change the source under the relevant `packages/<package-name>/src` directory.
 2. Increase that package's `version` in its `package.json` (for example, `0.1.0` to `0.1.1`). GitHub Packages never permits overwriting a published version.
 3. From this repository, run `pnpm install` and then `pnpm --filter @lengi21/<package-name> run build`.
 4. Commit and push the source, version, and lockfile changes to the default branch.

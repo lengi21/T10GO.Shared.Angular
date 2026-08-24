@@ -11,6 +11,7 @@ on:
           - '@lengi21/federation-contracts'
           - '@lengi21/t10go-design-system'
           - '@lengi21/t10go-env-loader'
+          - '@lengi21/t10go-auth-client'
 
 permissions:
   contents: read
@@ -40,6 +41,9 @@ jobs:
               ;;
             '@lengi21/t10go-env-loader')
               npm publish ./dist/t10go-env-loader --access restricted
+              ;;
+            '@lengi21/t10go-auth-client')
+              npm publish ./dist/t10go-auth-client --access restricted
               ;;
             '@lengi21/federation-contracts')
               pnpm --filter '${{ inputs.package }}' publish --no-git-checks

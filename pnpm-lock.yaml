@@ -23,6 +23,24 @@ importers:
 
   packages/federation-contracts: {}
 
+  packages/t10go-auth-client:
+    dependencies:
+      '@angular/common':
+        specifier: ^22.0.0
+        version: 22.1.3(@angular/core@22.1.3(@angular/compiler@22.1.0)(rxjs@7.8.2))(rxjs@7.8.2)
+      '@angular/core':
+        specifier: ^22.0.0
+        version: 22.1.3(@angular/compiler@22.1.0)(rxjs@7.8.2)
+      '@angular/router':
+        specifier: ^22.0.0
+        version: 22.1.3(@angular/common@22.1.3(@angular/core@22.1.3(@angular/compiler@22.1.0)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.1.3(@angular/compiler@22.1.0)(rxjs@7.8.2))(@angular/platform-browser@22.1.3(@angular/common@22.1.3(@angular/core@22.1.3(@angular/compiler@22.1.0)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@22.1.3(@angular/compiler@22.1.0)(rxjs@7.8.2)))(rxjs@7.8.2)
+      rxjs:
+        specifier: ^7.8.0
+        version: 7.8.2
+      tslib:
+        specifier: ^2.3.0
+        version: 2.8.1
+
   packages/t10go-design-system:
     dependencies:
       '@angular/common':
