@@ -4,7 +4,13 @@
 
 **Decision:** Added text and number controls based on `T10goInputBase<TValue>`, a semantic native-button directive, and an elevated card component to the Design System.
 
-**Impact:** Authentication and future product screens can use the same accessible field shell, form-control integration, surface, and action styling. These primitives release in `@lengi21/t10go-design-system@0.1.3`.
+**Impact:** Authentication and future product screens can use the same accessible field shell, form-control integration, surface, and action styling.
+
+## 2026-08-25 — Optional input constraints corrected
+
+**Fix:** Unset text-input length and number bounds are omitted from the native input rather than bound as zero values.
+
+**Impact:** `T10goTextInputComponent` accepts text normally when no maximum length is configured. The correction releases in `@lengi21/t10go-design-system@0.2.1`.
 
 ## 2026-08-25 — Shared Angular authentication client
 
