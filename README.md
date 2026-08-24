@@ -15,6 +15,10 @@ Private packages shared by the T10GO Shell and federated remote applications. Pa
 
 The Design System ships with **Indigo & Teal**, **Evergreen & Clay**, and **Sage & Gold** palettes. Each palette provides light and dark tokens and is persisted through `ThemeService`. Theme values are CSS custom properties in `packages/t10go-design-system/src/styles/theme/`.
 
+## Form and surface primitives
+
+`T10goInputBase<TValue>` remains the shared foundation for every single-value control. `T10goTextInputComponent` and `T10goNumberInputComponent` extend it with Angular form support, labels, hints, errors, accessibility wiring, and theme tokens. Use `T10goButtonDirective` on semantic native `<button>` or `<a>` elements, and use `T10goCardComponent` for elevated content surfaces. Future autocomplete and specialized inputs must extend the base rather than recreate form behavior.
+
 ## Install in an application
 
 Create a project `.npmrc` file:

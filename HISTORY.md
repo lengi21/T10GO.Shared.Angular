@@ -1,5 +1,11 @@
 # T10GO Shared Packages — Technical History
 
+## 2026-08-25 — Shared input, button, and card primitives
+
+**Decision:** Added text and number controls based on `T10goInputBase<TValue>`, a semantic native-button directive, and an elevated card component to the Design System.
+
+**Impact:** Authentication and future product screens can use the same accessible field shell, form-control integration, surface, and action styling. These primitives release in `@lengi21/t10go-design-system@0.1.3`.
+
 ## 2026-08-25 — Shared Angular authentication client
 
 **Decision:** Added `@lengi21/t10go-auth-client`, which provides a session-only token store, Authorization Code + PKCE browser flow, shared protected-route guard, and opt-in Bearer-token interceptor.
