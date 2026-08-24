@@ -17,7 +17,7 @@ The Design System ships with **Indigo & Teal**, **Evergreen & Clay**, and **Sage
 
 ## Form and surface primitives
 
-`T10goInputBase<TValue>` remains the shared foundation for every single-value control. `T10goTextInputComponent` and `T10goNumberInputComponent` extend it with Angular form support, labels, hints, errors, accessibility wiring, and theme tokens. Use `T10goButtonDirective` on semantic native `<button>` or `<a>` elements, and use `T10goCardComponent` for elevated content surfaces. Future autocomplete and specialized inputs must extend the base rather than recreate form behavior.
+`T10goInputBase<TValue>` remains the shared foundation for every single-value control. `T10goTextInputComponent`, `T10goNumberInputComponent`, and `T10goTextareaComponent` extend it with signal and Angular-form support, labels, hints, errors, accessibility wiring, and theme tokens. Use `T10goButtonComponent` for actions and `T10goCardComponent` for elevated content surfaces. Future autocomplete and specialized inputs must extend the base rather than recreate form behavior.
 
 ## Install in an application
 

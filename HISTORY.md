@@ -12,6 +12,12 @@
 
 **Impact:** `T10goTextInputComponent` accepts text normally when no maximum length is configured. The correction releases in `@lengi21/t10go-design-system@0.2.1`.
 
+## 2026-08-25 — Component-backed shared buttons and textarea
+
+**Decision:** The Design System exposes a token-styled `T10goButtonComponent` and a `T10goTextareaComponent` in addition to text and number inputs.
+
+**Impact:** Application features can avoid browser-default action and multi-line controls. The corrected and expanded controls release in `@lengi21/t10go-design-system@0.2.2`.
+
 ## 2026-08-25 — Shared Angular authentication client
 
 **Decision:** Added `@lengi21/t10go-auth-client`, which provides a session-only token store, Authorization Code + PKCE browser flow, shared protected-route guard, and opt-in Bearer-token interceptor.
