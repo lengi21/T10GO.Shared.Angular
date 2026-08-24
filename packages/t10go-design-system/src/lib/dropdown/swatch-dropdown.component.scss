@@ -1,0 +1,102 @@
+.t10go-swatch-dropdown {
+  position: relative;
+  display: grid;
+  gap: var(--app-space-2);
+}
+
+.t10go-swatch-dropdown__label {
+  color: var(--app-text-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.t10go-swatch-dropdown__trigger,
+.t10go-swatch-dropdown__option {
+  width: 100%;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface-elevated);
+  color: var(--app-text-primary);
+  text-align: left;
+}
+
+.t10go-swatch-dropdown__trigger {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  min-height: 40px;
+  gap: var(--app-space-2);
+  padding: 0 var(--app-space-3);
+  border-radius: var(--app-radius-md);
+  cursor: pointer;
+}
+
+.t10go-swatch-dropdown__trigger:focus-visible,
+.t10go-swatch-dropdown__option:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--app-focus-ring) 45%, transparent);
+  outline-offset: 2px;
+}
+
+.t10go-swatch-dropdown__menu {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + var(--app-space-2));
+  right: 0;
+  left: 0;
+  display: grid;
+  gap: var(--app-space-1);
+  padding: var(--app-space-1);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius-md);
+  background: var(--app-surface-elevated);
+  box-shadow: var(--app-shadow-lg);
+}
+
+.t10go-swatch-dropdown__option {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--app-space-3);
+  padding: var(--app-space-2);
+  border-color: transparent;
+  border-radius: var(--app-radius-sm);
+  cursor: pointer;
+
+  &:hover,
+  &--selected {
+    background: var(--app-primary-subtle);
+    color: var(--app-primary-strong);
+  }
+}
+
+.t10go-swatch-dropdown__swatches {
+  display: inline-flex;
+  overflow: hidden;
+  width: 40px;
+  height: 20px;
+  border: 1px solid color-mix(in srgb, var(--app-text-primary) 16%, transparent);
+  border-radius: var(--app-radius-sm);
+}
+
+.t10go-swatch-dropdown__swatch {
+  flex: 1;
+}
+
+.t10go-swatch-dropdown__option-copy,
+.t10go-swatch-dropdown__description {
+  display: grid;
+  gap: 0.125rem;
+}
+
+.t10go-swatch-dropdown__description {
+  color: var(--app-text-muted);
+  font-size: 0.75rem;
+}
+
+.t10go-swatch-dropdown__chevron {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.125rem;
+  border-right: 1.5px solid currentcolor;
+  border-bottom: 1.5px solid currentcolor;
+  transform: rotate(45deg) translateY(-0.125rem);
+}

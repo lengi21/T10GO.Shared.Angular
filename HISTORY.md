@@ -1,5 +1,11 @@
 # T10GO Shared Packages — Technical History
 
+## 2026-08-24 — User-selectable palettes
+
+**Decision:** Added persistent palette selection to `ThemeService` and a reusable swatch dropdown that renders palette names with visible color strips.
+
+**Impact:** Applications can offer multiple branded palettes without duplicating theme logic or sacrificing light/dark mode support.
+
 ## 2026-08-24 — Indigo and teal application palette
 
 **Decision:** Replaced the warm brown/orange palette with indigo primary actions, teal support and focus colors, and neutral slate surfaces in light and dark themes.

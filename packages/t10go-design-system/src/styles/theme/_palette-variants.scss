@@ -1,0 +1,75 @@
+[data-theme='light'][data-palette='evergreen-clay'] {
+  --app-surface-page: #f7eae0;
+  --app-surface-container: #fffaf7;
+  --app-surface-elevated: #ffffff;
+  --app-surface-sunken: #f1dfd2;
+  --app-text-primary: #292019;
+  --app-text-secondary: #684b3f;
+  --app-text-muted: #8a6e62;
+  --app-border: #e5cbbb;
+  --app-primary: #1d4533;
+  --app-primary-strong: #123224;
+  --app-primary-subtle: #e3f0e8;
+  --app-on-primary: #ffffff;
+  --app-secondary: #5e3122;
+  --app-secondary-subtle: #f9d2ba;
+  --app-on-secondary: #ffffff;
+  --app-focus-ring: #c66e4d;
+}
+
+[data-theme='dark'][data-palette='evergreen-clay'] {
+  --app-surface-page: #101d17;
+  --app-surface-container: #172b21;
+  --app-surface-elevated: #203827;
+  --app-surface-sunken: #0b1510;
+  --app-text-primary: #f9eee6;
+  --app-text-secondary: #e2c5b5;
+  --app-text-muted: #b9998b;
+  --app-border: #3f5845;
+  --app-primary: #b6d8c2;
+  --app-primary-strong: #d2eadb;
+  --app-primary-subtle: #274d37;
+  --app-on-primary: #143021;
+  --app-secondary: #f9d2ba;
+  --app-secondary-subtle: #573326;
+  --app-on-secondary: #422016;
+  --app-focus-ring: #f9d2ba;
+}
+
+[data-theme='light'][data-palette='sage-gold'] {
+  --app-surface-page: #f7f4ed;
+  --app-surface-container: #fdfbf7;
+  --app-surface-elevated: #ffffff;
+  --app-surface-sunken: #edf0e8;
+  --app-text-primary: #273128;
+  --app-text-secondary: #5c6d5b;
+  --app-text-muted: #7c8d7c;
+  --app-border: #d7e0d2;
+  --app-primary: #536f52;
+  --app-primary-strong: #3e573e;
+  --app-primary-subtle: #e6eee2;
+  --app-on-primary: #ffffff;
+  --app-secondary: #9a742b;
+  --app-secondary-subtle: #f7ecd0;
+  --app-on-secondary: #ffffff;
+  --app-focus-ring: #c8a96b;
+}
+
+[data-theme='dark'][data-palette='sage-gold'] {
+  --app-surface-page: #152017;
+  --app-surface-container: #1d2b20;
+  --app-surface-elevated: #26362a;
+  --app-surface-sunken: #0f1711;
+  --app-text-primary: #f4f2ea;
+  --app-text-secondary: #d3decf;
+  --app-text-muted: #aabb9f;
+  --app-border: #405540;
+  --app-primary: #c7d3c0;
+  --app-primary-strong: #e0e9da;
+  --app-primary-subtle: #3c533c;
+  --app-on-primary: #263127;
+  --app-secondary: #e5c47f;
+  --app-secondary-subtle: #58471f;
+  --app-on-secondary: #35280d;
+  --app-focus-ring: #e5c47f;
+}

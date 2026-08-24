@@ -12,7 +12,7 @@ Private packages shared by the T10GO Shell and federated remote applications. Pa
 
 ## Theme palette
 
-The Design System uses a calm indigo-and-teal palette: indigo signals primary actions and navigation, teal supports focus and secondary actions, and neutral navy/slate surfaces keep both themes legible in information-dense management screens. Theme values are CSS custom properties in `packages/t10go-design-system/src/styles/theme/`.
+The Design System ships with **Indigo & Teal**, **Evergreen & Clay**, and **Sage & Gold** palettes. Each palette provides light and dark tokens and is persisted through `ThemeService`. Theme values are CSS custom properties in `packages/t10go-design-system/src/styles/theme/`.
 
 ## Install in an application
 
